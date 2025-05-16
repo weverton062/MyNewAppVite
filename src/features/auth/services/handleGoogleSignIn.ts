@@ -8,7 +8,7 @@ export async function handleGoogleSignIn(navigate: (path: string) => void) {
         if (auth.currentUser) {
             const token = await auth.currentUser.getIdToken();
             Cookies.set("authToken", token, { expires: 15, secure: true, sameSite: "strict" });
-            navigate("/dashboard"); // ou a rota desejada
+            navigate("/dashboard"); 
             return;
           }
 
@@ -20,12 +20,12 @@ export async function handleGoogleSignIn(navigate: (path: string) => void) {
 
         const token = await result.user.getIdToken();
 
-        // Armazena o token no cookie por 7 dias
+        
         Cookies.set("authToken", token, 
             { 
-                expires: 7,
-                secure: true, // só envia em HTTPS
-                sameSite: "strict", // evita envio em requisições de outros domínios
+                expires: 12,
+                secure: true, 
+                sameSite: "strict", 
             },
 
             

@@ -1,18 +1,9 @@
 import { ModeToggle } from "@/components/mode-toggle"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { useForm } from "react-hook-form";
-import { SignInData, signInSchema } from "@/lib/form"
-import { zodResolver } from "@hookform/resolvers/zod";
-import { SignUpForm } from "@/components/SignUpForm"
+import { SignUpForm } from "@/features/auth/components/SignUpForm"
 
 
 export function SignUp() {
-    const {
-        formState: { errors }
-      } = useForm<SignInData>({
-        resolver: zodResolver(signInSchema)
-      })
-
     return (
         <main className="h-screen flex w-full">
             <div className="bg-background w-full h-full flex items-center justify-center p-16">

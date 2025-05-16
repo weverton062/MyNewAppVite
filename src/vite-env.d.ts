@@ -7,6 +7,8 @@ interface ImportMetaEnv {
     readonly VITE_STORAGE_BUCKET: string;
     readonly VITE_MESSAGING_SENDER_ID: string;
     readonly VITE_APP_ID: string;
+    readonly VITE_API_URL_BASE: string;
+    readonly VITE_API_APP_TOKEN: string;
     // adicione mais conforme necessário
   }
   
